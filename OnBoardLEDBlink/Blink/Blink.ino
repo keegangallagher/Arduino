@@ -22,6 +22,10 @@
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
 
+//Programme: Keegan Gallagher
+//Program: Onboard LED Blink
+//Date: Febuary 28, 2023
+
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
