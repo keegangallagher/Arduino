@@ -8,13 +8,13 @@
  * vehicle that are in your blind spot and turn on warning sign
  */
 
-#define trigPin 2
-#define echoPin 3
-#define LEDlampRed 4
-#define  LEDlampYellow 5
-#define LEDlampGreen 6 
-#define soundbuzzer 7
-int sound  = 500;
+int trigPin = 7;
+int echoPin = 6;
+int LEDlampRed = 9;
+int LEDlampYellow = 10; 
+int LEDlampGreen = 11;
+int soundbuzzer = 3;
+int sound = 500;
 
 
 void setup() {
@@ -43,13 +43,13 @@ void  loop() {
       digitalWrite(LEDlampGreen,  LOW);
   }
   
-  if (distance < 20) {
+  if (distanceincm < 20) {
     digitalWrite(LEDlampYellow,  HIGH);
 }
   else {
     digitalWrite(LEDlampYellow,LOW);
   }
-  if (distance  < 5) {
+  if (distanceincm < 5) {
     digitalWrite(LEDlampRed, HIGH);
     sound = 1000;
 }
@@ -57,14 +57,14 @@ void  loop() {
     digitalWrite(LEDlampRed,LOW);
   }
  
-  if (distanceincm > 5 ||  distanceinsm <= 0){
+  if (distanceincm > 5 ||  distanceincm <= 0){
     Serial.println("Outside the permissible range of distances");
     noTone(soundbuzzer);
   }
   else {
-    Serial.print(distance);
+    Serial.print(distanceincm);
     Serial.println("  cm");
-    tone(buzzer, sound);
+    tone(soundbuzzer, sound);
   }
   
   delay(300);
