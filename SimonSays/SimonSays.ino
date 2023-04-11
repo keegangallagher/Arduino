@@ -1,3 +1,4 @@
+// Code: https://projecthub.arduino.cc/SAnwandter1/5c461711-5c20-46f3-8d60-732ea59e6677
 const int zero[7] = {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, LOW};
 const int one[7] = {LOW, HIGH, HIGH, LOW, LOW, LOW, LOW};
 const int two[7] = {HIGH, HIGH, LOW, HIGH, HIGH, LOW, HIGH};
